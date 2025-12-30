@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "hide-scoreboard",
+  "version": "${version}",
+  "name": "Hide-Scoreboard",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/hide-scoreboard/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "lol.plucky.hideScoreboard.client.MainClient"
+    ],
+    "main": [
+      "lol.plucky.hideScoreboard.Main"
+    ]
+  },
+  "mixins": [
+    "hide-scoreboard.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
