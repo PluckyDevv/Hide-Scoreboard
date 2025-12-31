@@ -2,23 +2,24 @@
   "schemaVersion": 1,
   "id": "hide-scoreboard",
   "version": "${version}",
-  "name": "Hide-Scoreboard",
-  "description": "",
-  "authors": [],
-  "contact": {},
+  "name": "Hide Scoreboard",
+  "description": "Hide scoreboard with one key bind",
+  "authors": ["PluckyDev"],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/hide-scoreboard",
+    "sources": "https://github.com/PluckyDevv/Hide-Scoreboard",
+    "issues": "https://github.com/PluckyDevv/Hide-Scoreboard/issues"
+  },
   "license": "MIT",
   "icon": "assets/hide-scoreboard/icon.png",
   "environment": "client",
   "entrypoints": {
     "client": [
       "lol.plucky.hideScoreboard.client.MainClient"
-    ],
-    "main": [
-      "lol.plucky.hideScoreboard.Main"
     ]
   },
   "mixins": [
-    "hide-scoreboard.mixins.json"
+    "hideScoreboard.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
