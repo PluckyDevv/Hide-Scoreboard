@@ -1,3 +1,6 @@
 {
-    "key.hide-scoreboard.toggle": "Toggle Scoreboard"
+    "key.hide-scoreboard.toggle": "Toggle Scoreboard",
+    "key.hide-scoreboard.shown": "Scoreboard is now shown!",
+    "key.hide-scoreboard.hidden": "Scoreboard is now hidden!",
+    "key.hide-scoreboard.warning": "Scoreboard is still hidden."
 }

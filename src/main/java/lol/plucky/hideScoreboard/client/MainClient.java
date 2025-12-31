@@ -26,14 +26,16 @@ public class MainClient implements ClientModInitializer {
             while (keyBinding.wasPressed()) {
                 if (client.player != null) {
                     ScoreboardState.toggleScoreboard();
-                    String status = ScoreboardState.isScoreboardVisible() ? "shown" : "hidden";
-                    client.player.sendMessage(Text.literal("Scoreboard is now " + status).formatted(Formatting.YELLOW), true);
+                    String messageKey = ScoreboardState.isScoreboardVisible() ? "key.hide-scoreboard.shown" : "key.hide-scoreboard.hidden";
+                    client.player.sendMessage(Text.translatable(messageKey).formatted(Formatting.YELLOW), true);
                 }
             }
         });
 
-        ClientPlayConnectionEvents.DISCONNECT.register((handler, client) -> {
-            ScoreboardState.reset();
+        ClientPlayConnectionEvents.JOIN.register((handler, packet, client) -> {
+            if (client.player != null && !ScoreboardState.isScoreboardVisible()) {
+                client.player.sendMessage(Text.translatable("key.hide-scoreboard.warning").formatted(Formatting.GRAY, Formatting.ITALIC), true);
+            }
         });
     }
 }
